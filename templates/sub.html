@@ -1,0 +1,129 @@
+{% extends "layout/layout1.html" %}
+
+
+{%block content%}
+    <!-- Header -->
+    <header id="top" class="header">
+        <div class="text-vertical-center">
+            <h1>{{i}}</h1>
+            <br>
+        </div>
+    </header>
+
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>{{i}}</h2>
+                    <p>
+                        <table>
+                        <tr>
+                            <th>{{'Filename'}}</th>
+                            <th>{{'Filetype'}}</th>
+                            <th>{{'Version'}}</th>
+                            <th>{{'Author'}}</th>
+                            <th>{{'Date'}}</th>
+                        </tr>
+                        {% for ii in arr %}
+                        <tr>
+                            <td>{{ii['filename']}}</td>
+                            <td>{{ii['filetype']}}</td>
+                            <td>{{ii['version']}}</td>
+                            <td>{{ii['author']}}</td>
+                            <td>{{ii['date']}}</td>
+                        </tr>
+                        {%endfor%}
+                        </table>
+
+                    </p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+
+    <section id="feedback" class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Please leave your feedback</h2>
+                    <form method = "post" action = "/post_feedback">
+                        <p>
+                            <label>Subject</label>
+                            <input id = "subject" name = "subject" value={{i}} type = "text" align="center" size="20" />
+                        </p>
+                        <label>Your Name:</label>
+                        <input id = "name" name = "name" type = "text" size="50" />
+                        <p>
+                            <label>You Feedback:</label>
+                            <textarea name = "mess" id="mess" rows="5" cols="30"></textarea>
+                        </p>
+                        <input type = "submit" />
+                    </form>
+
+                    <br>
+
+
+
+                    <form method = "get" action = "/find_feedback/{{i}}">
+        <label>Search Feedback</label>
+        <input id = "searchfeedback" name = "searchfeedback" type = "text" size="50" />
+        <input name = "Search" value = "Search" type = "submit" />
+    </form>
+
+    {% if showornot == 1 %}
+        {%if arr1|length == 0 %}
+            <section id="returnFeed" class="about">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <h2 id="searchTitle">There is no searched feedback yet.</h2>
+                        </div>
+                    </div>
+            <!-- /.row -->
+                </div>
+        <!-- /.container -->
+            </section>
+        {%else %}
+            <section id="emptyFeed" class="about">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <h2 id="searchTitle1">All of Searched Feedback</h2>
+                            <p>
+                                <table>
+                                    <tr>
+                                        <th>{{'Commentor'}}</th>
+                                        <th>{{'Comments'}}</th>
+                                    </tr>
+                                    {% for iii in arr1 %}
+                                    <tr>
+                                        <td>{{iii['name']}}</td>
+                                        <td>{{iii['message']}}</td>
+                                    </tr>
+                                    {%endfor%}
+                                <table>
+                            </p>
+                        </div>
+                    </div>
+            <!-- /.row -->
+                </div>
+        <!-- /.container -->
+            </section>
+        {%endif%}
+    {%endif%}
+
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+
+{%endblock%}}
+
+

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lists>
+<list
+   path="https://subversion.ews.illinois.edu/svn/sp17-cs242/ssong38">
+<entry
+   kind="dir">
+<name>Assignment0</name>
+<commit
+   revision="2468">
+<author>ssong38</author>
+<date>2017-01-31T05:40:08.206587Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>Assignment0/ResearchCode(Part).ipynb</name>
+<size>682188</size>
+<commit
+   revision="2468">
+<author>ssong38</author>
+<date>2017-01-31T05:40:08.206587Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>Assignment0/test1st.py</name>
+<size>15767</size>
+<commit
+   revision="2468">
+<author>ssong38</author>
+<date>2017-01-31T05:40:08.206587Z</date>
+</commit>
+</entry>
+<entry
+   kind="file">
+<name>Assignment0/test2nd.py</name>
+<size>1878</size>
+<commit
+   revision="2468">
+<author>ssong38</author>
+<date>2017-01-31T05:40:08.206587Z</date>
+</commit>
+</entry>
+</list>
+</lists>

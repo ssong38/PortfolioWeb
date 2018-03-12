@@ -1,0 +1,48 @@
+{% extends "layout/layout1.html" %}
+
+
+{%block content%}
+    <!-- Header -->
+    <header id="top" class="header">
+        <div class="text-vertical-center">
+            <h1>Feedback Page</h1>
+            <br>
+        </div>
+    </header>
+
+    <section id="PostedFeedback" class="about">
+        <div class="container">
+            <div class="row">
+
+                    {% for iiii in arr %}
+
+                        <fieldset>
+                            <legend><b>{{iiii['name']}} commented in {{iiii['page']}} page:</b></legend>
+                                <span class = "postFeedbackMess">{{iiii['message']}}</span>
+                                <br>
+                                <form method = "post" action = "/post_feedback">
+                                    <label>Replyer:</label>
+                                    <input id = "name" name = "name" type = "text" size="20" />
+                                    <label> Subject</label>
+                                    <input id = "subject" name = "subject" value="Main" type = "text" align="center" size="20" />
+                                    <label>You Reply:</label>
+                                    <textarea class="replyyy" name = "mess" id="mess" rows="3" cols="60">{{iiii['name']}} said {{iiii['message']}}&#13;&#10Your reply:&#13;&#10</textarea>
+                                    <input name = "Sumbit Reply" value="Reply" type = "submit" />
+                                 </form>
+                        </fieldset>
+                        <br>
+
+
+                    {%endfor%}
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+
+
+{%endblock%}}
+
+
+

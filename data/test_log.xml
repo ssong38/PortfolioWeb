@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<log>
+<logentry
+   revision="2468">
+<author>ssong38</author>
+<date>2017-01-31T05:40:08.206587Z</date>
+<paths>
+<path
+   kind="dir"
+   action="A">/ssong38/Assignment0</path>
+<path
+   kind="file"
+   action="A">/ssong38/Assignment0/ResearchCode(Part).ipynb</path>
+<path
+   kind="file"
+   action="A">/ssong38/Assignment0/test1st.py</path>
+<path
+   kind="file"
+   action="A">/ssong38/Assignment0/test2nd.py</path>
+</paths>
+<msg>previous project</msg>
+</logentry>
+</log>
